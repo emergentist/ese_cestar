@@ -1,0 +1,23 @@
+Embedded Systems Engineering Course README
+
+	author: Takis Zourntos
+
+ You will find most of the contents of this repository self-explanatory.
+ I suggest you follow the instructions below for your basic setup
+
+
+
+###
+On your Beaglebone, please include the following two commands in ~/.profile 
+and remember to type "source ~/.profile" at the command prompt to activate:
+
+export SLOTS="/sys/devices/platform/bone_capemgr/slots"
+export PINS="/sys/kernel/debug/pinctrl/44e10800.pinmux/pins"
+
+###
+Then, using the visudo command, make sure you include the following two lines:
+
+Defaults        env_keep += "SLOTS"
+Defaults        env_keep += "PINS"
+
+###
